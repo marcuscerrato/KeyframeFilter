@@ -19,23 +19,6 @@ public class KeyframeFilter
     	String inputFolder = args[0];
     	String outputFolder = args[1];
     	
-    	
-    	/*
-    	VFSListDataset<MBFImage> keyframes = new VFSListDataset<MBFImage>(
-    			inputFolder, ImageUtilities.MBFIMAGE_READER);
-
-    	int conta = 0;
-    	for (MBFImage keyframe: keyframes) {
-    		MBFImage filteredImage = keyframe.processInplace(new FGaussianConvolve(2f));
-    		String number = String.format("%09d", conta);
-    		String outputName = "filteredKeyframe" + number + ".jpg";
-    		ImageUtilities.write(filteredImage, new File(outputFolder + outputName));
-    		conta++;
-    	}
-    	*/
-
-    	
-    	
     	ShotList shotList = KeyframeReader.readFromFolder(inputFolder);
     		
     	int shotNum = 0;
